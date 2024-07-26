@@ -29,10 +29,10 @@ html,body {
 body {
 	margin: 0px;
 	padding: 0px;
-	color: #999;	/*全体の文字色*/
+	color: #606060;	/*全体の文字色*/
 	font-family: "M PLUS Rounded 1c", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;	/*フォント種類*/
 	line-height: 2;		/*行間*/
-	background: #fff;	/*背景色*/
+	background-color: #a9d1ec;	/*背景色*/
 	-webkit-text-size-adjust: none;
 	overflow-x: hidden;
 }
@@ -44,14 +44,38 @@ table {border-collapse:collapse;font-size: 1rem;border-spacing: 0;}
 video {max-width: 100%;}
 iframe {width: 100%;}
 
+nav{
+text-align: center;
+}
+nav ul{
+margin: 10px ;
+padding: 0 ;
+}
+nav ul li{
+list-style: none;
+display: inline-block;
+width: 18%;
+min-width: 90px;
+}
+nav ul li a{
+text-decoration: none;
+color: #333;
+}
+nav ul li.current a{
+color: #F33135;
+}
+nav ul li a:hover{
+color: #344cfa;
+}
+
 /*リンク（全般）設定
 ---------------------------------------------------------------------------*/
 a {
-	color: #999;		/*リンクテキストの色*/
+	color: #606060;		/*リンクテキストの色*/
 	transition: 0.2s;	/*マウスオン時の移り変わるまでの時間設定。0.2秒。*/
 }
 a:hover {
-	color: #a9d1ec;			/*マウスオン時の文字色*/
+	color: #606060;			/*マウスオン時の文字色*/
 	text-decoration: none;	/*マウスオン時に下線を消す設定。残したいならこの１行削除。*/
 }
 
@@ -73,6 +97,13 @@ header {
 	width: 100%;
 	height: 100px;	/*高さ*/
 }
+
+header_belt {
+	position: relative;
+	width: 100%;
+	height: 120px;	/*高さ*/
+}
+
 /*ヘッダーブロック（※トップページへの追加設定）*/
 .home header {
 	height: auto;	/*高さを自動に*/
@@ -86,7 +117,7 @@ header #logo {
 }
 /*ロゴ画像（※トップページへの追加設定）*/
 .home header #logo {
-	top: 30%;	/*上からの配置場所*/
+	top: 50%;	/*上からの配置場所*/
 }
 
 /*３本バーアイコン設定
@@ -142,7 +173,7 @@ header #logo {
 /*コンテンツ
 ---------------------------------------------------------------------------*/
 #contents {
-	padding: 150px 100px;	/*上下、左右へのコンテンツ内の余白*/
+	padding: 30px 100px;	/*上下、左右へのコンテンツ内の余白*/
 	position: relative;
 	animation-name: opa1;		/*keyframes.cssで使う@keyframesの指定*/
 	animation-duration: 0.5S;	/*アニメーションの実行時間*/
@@ -169,7 +200,7 @@ header #logo {
 	clear: both;
 	margin-bottom: 30px;	/*下に空けるスペース*/
 	font-size: 1.5rem;		/*文字サイズ。冒頭で指定しているフォントサイズの1.5倍です。*/
-	border-bottom: 1px dashed #999;	/*下線の幅、線種、色*/
+	border-bottom: 1px dashed #606060;	/*下線の幅、線種、色*/
 	padding-left: 3%;		/*左側に空ける余白*/
 	letter-spacing: 0.1em;	/*文字間隔を少し広めにとる指定。通常がいいならこの１行削除。*/
 }
@@ -201,7 +232,7 @@ header #logo {
 #contents .list {
 	float: left;	/*左に回り込み*/
 	overflow: hidden;
-	border-radius: 50%;		/*円形にする指定。この１行を削除すれば四角形になります。30pxなどに変更すれば角丸の四角形になります。*/
+	border-radius: 10px;		/*円形にする指定。この１行を削除すれば四角形になります。30pxなどに変更すれば角丸の四角形になります。*/
 	margin: 0 6.6% 40px;	/*上、左右、下へ空けるスペース。サムネイル同士の余白部分です。*/
 	width: 20%;	/*幅*/
 }
@@ -212,13 +243,13 @@ footer {
 	clear: both;
 	font-size: 0.75rem;	/*文字サイズ*/
 	text-align: center;
-	box-shadow: 0px 0px 50px #fff inset;	/*ボックスの影。insetは内側に向ける指定。*/
+	box-shadow: 0px 0px 50px #606060 inset;	/*ボックスの影。insetは内側に向ける指定。*/
 	padding: 3%;	/*余白*/
-	background: url(../images/1.jpg) no-repeat center center / cover;	/*背景画像の読み込み。*/
-	color: #666;	/*文字色*/
+	background: url(../images/Ninja realm Footer.svg) no-repeat center center / cover;	/*背景画像の読み込み。*/
+	color: #606060;	/*文字色*/
 }
 footer small {font-size: 100%;}
-footer a {text-decoration: none;color: #666 !important;}
+footer a {text-decoration: none;color: #606060 !important;}
 footer .pr {display: block;}
 
 /*facebookやtwitterなどのアイコン
@@ -260,7 +291,7 @@ ul.icon img:hover {
 ---------------------------------------------------------------------------*/
 /*テーブル１行目に入った見出し部分（※caption）*/
 .ta1 caption {
-	border: 1px solid #fff;	/*テーブルの枠線の幅、線種、色*/
+	border: 1px solid #606060;	/*テーブルの枠線の幅、線種、色*/
 	border-bottom: none;	/*下線だけ消す*/
 	text-align: left;		/*文字を左寄せ*/
 	font-weight: bold;		/*太字に*/
@@ -273,7 +304,7 @@ ul.icon img:hover {
 	margin: 0 3% 30px;
 }
 .ta1, .ta1 td, .ta1 th {
-	border: 1px solid #fff;	/*テーブルの枠線の幅、線種、色*/
+	border: 1px solid #606060;	/*テーブルの枠線の幅、線種、色*/
 	padding: 15px 10px;		/*上下、左右へのボックス内の余白*/
 	word-break: break-all;
 }
@@ -288,17 +319,17 @@ ul.icon img:hover {
 ---------------------------------------------------------------------------*/
 p.check {
 	background: #ff0000;
-	color:#fff;
+	color:#606060;
 	padding: 10px 25px !important;
 	margin-bottom: 20px;
 }
-p.check a {color: #fff;}
+p.check a {color: #606060;}
 
 /*トップページのNEWアイコン
 ---------------------------------------------------------------------------*/
 .newicon {
 	background: #F00;	/*背景色*/
-	color: #FFF;		/*文字色*/
+	color: #606060;		/*文字色*/
 	line-height: 1.5;
 	padding: 2px 5px;
 	border-radius: 2px;
@@ -321,8 +352,8 @@ body.is-fixed-pagetop .nav-fix-pos-pagetop a {
 	right: 3%;		/*右から3%の場所に配置*/
 	background: #666;	/*背景色（古いブラウザ用）*/
 	background: rgba(0,0,0,0.6);	/*背景色。0,0,0は黒の事。0.6は60%色がついた状態。*/
-	color: #fff;	/*文字色*/
-	border: 1px solid #fff;	/*枠線の幅、線種、色*/
+	color: #606060;	/*文字色*/
+	border: 1px solid #606060;	/*枠線の幅、線種、色*/
 	animation-name: opa1;	/*keyframes.cssで使う@keyframesの指定*/
 	animation-duration: 1S;	/*アニメーションの実行時間*/
 	animation-fill-mode: both;	/*アニメーションの待機中は最初のキーフレームを維持、終了後は最後のキーフレームを維持。*/
@@ -363,8 +394,6 @@ ol {
 .fr {float: right;}
 .sh {display: none;}
 .ofh {overflow: hidden;}
-
-
 
 /*画面幅800px以下の設定
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
